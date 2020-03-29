@@ -1,0 +1,10 @@
+[
+  {
+    "name": "--app-background-color",
+    "value": "#bbbcbc"
+  },
+  {
+    "name": "--app-color",
+    "value": "#444444"
+  }
+]
