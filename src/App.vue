@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Header />
     <main>
       <MovieCard />
     </main>
@@ -10,16 +11,17 @@
 
 <script lang="ts">
 import Vue from "vue";
-import MovieCard from "./components/MovieCard.vue";
-import { ref, computed, Ref, onMounted } from '@vue/composition-api';
+import MovieCard from "@/components/MovieCard.vue";
+import Header from "@/components/Header.vue";
+import { onMounted } from "@vue/composition-api";
 
 import { loadTheme } from "@/tokens/infra/tokens";
 
 export default Vue.extend({
-  components: { MovieCard },
+  components: { MovieCard, Header },
   setup() {
     onMounted(() => {
-      loadTheme('LIGHT');
+      loadTheme("LIGHT");
     });
 
     return { loadTheme };
@@ -37,7 +39,7 @@ export default Vue.extend({
 
 #app main {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 5px;
 }
 </style>
